@@ -1,5 +1,11 @@
 import "./preflight.css";
 import "./index.css";
+import configureHome from "../home/home.js";
+
+export const content = document.createElement("div");
+
+configureIndex();
+configureHome();
 
 function configureIndex() {
   const body = document.querySelector("body");
@@ -12,7 +18,6 @@ function configureIndex() {
   const contactButton = document.createElement("button");
   contactButton.textContent = "Contact";
 
-  const content = document.createElement("div");
   content.id = "content";
 
   nav.appendChild(homeButton);
@@ -22,5 +27,3 @@ function configureIndex() {
   body.appendChild(header);
   body.appendChild(content);
 }
-
-configureIndex();
