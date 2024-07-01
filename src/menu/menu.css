@@ -1,0 +1,34 @@
+.info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+
+  .name {
+    font-size: 3rem;
+    border: 0.3rem solid #c16a0a;
+    border-radius: 1rem;
+    padding: 0.2rem 2rem;
+    background-color: #ffc60c;
+    font-weight: 700;
+  }
+
+  .menu-item {
+    width: 30rem;
+    background-color: #ffc60c;
+    padding: 2rem;
+    border: 0.6rem solid #c16a0a;
+    border-radius: 2rem;
+
+    .menu-item-title {
+      font-weight: 700;
+      font-size: 1.5rem;
+      padding-left: 1rem;
+    }
+
+    .menu-item-price {
+      font-weight: 700;
+      font-size: 1.2rem;
+    }
+  }
+}

@@ -2,24 +2,28 @@ import { content } from "../index/index.js";
 import "./home.css";
 
 export default function configureHome() {
+  content.appendChild(infoContainer);
+  if (!initialized) {
+    initializeHome();
+  }
+}
+
+let initialized;
+const infoContainer = document.createElement("div");
+
+function initializeHome() {
+  infoContainer.classList.add("info-container");
   configureName();
-  configureInfoContainer();
   configureDescription();
   configureHours();
   configureLocation();
-}
-
-const infoContainer = document.createElement("div");
-
-function configureInfoContainer() {
-  infoContainer.classList.add("info-container");
-  content.appendChild(infoContainer);
+  initialized = true;
 }
 
 function configureName() {
   const name = document.createElement("h2");
-  name.textContent = "Beary's Breakfast Bar";
   name.classList.add("name");
+  name.textContent = "Beary's Breakfast Bar";
   infoContainer.appendChild(name);
 }
 
@@ -31,8 +35,8 @@ function configureDescription() {
   review.textContent =
     "Beary's has the best porridge! The atmosphere and customer service make you feel like you are sitting in the middle of the woods, eating like a bear! This is exactly the kind of place that I like to return to again and again.";
   const author = document.createElement("h4");
-  author.textContent = "Goldilocks";
   author.classList.add("author");
+  author.textContent = "Goldilocks";
   description.appendChild(review);
   description.appendChild(author);
   infoContainer.appendChild(description);
@@ -42,8 +46,8 @@ function configureHours() {
   const hours = document.createElement("div");
   hours.classList.add("hours");
   const hoursTitle = document.createElement("h3");
-  hoursTitle.textContent = "Hours";
   hoursTitle.classList.add("hours-title");
+  hoursTitle.textContent = "Hours";
   const schedule = document.createElement("p");
   schedule.classList.add("schedule");
   schedule.textContent =
