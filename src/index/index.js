@@ -2,6 +2,7 @@ import "./preflight.css";
 import "./index.css";
 import configureHome from "../home/home.js";
 import configureMenu from "../menu/menu.js";
+import configureContact from "../contact/contact.js";
 
 export const content = document.createElement("div");
 
@@ -26,6 +27,10 @@ function configureIndex() {
   });
   const contactButton = document.createElement("button");
   contactButton.textContent = "Contact";
+  contactButton.addEventListener("click", () => {
+    content.replaceChildren();
+    configureContact();
+  });
 
   content.id = "content";
 

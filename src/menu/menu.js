@@ -55,7 +55,7 @@ function configureMenuItem(title, description, price) {
   menuItemDescription.textContent = description;
   const menuItemPrice = document.createElement("h4");
   menuItemPrice.classList.add("menu-item-price");
-  menuItem.textContent = price;
+  menuItemPrice.textContent = price;
 
   menuItem.appendChild(menuItemTitle);
   menuItem.appendChild(menuItemDescription);
